@@ -1,5 +1,5 @@
 function Product() {
-  return <div>WorldWise</div>;
+  return <div>Product</div>;
 }
 
 export default Product;

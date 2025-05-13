@@ -5,6 +5,7 @@ import Pricing from './pages/Pricing';
 import Product from './pages/Product';
 import Login from './pages/Login';
 import AppLayout from './pages/AppLayout';
+import CityList from './components/CityList';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
         <Route path='pricing' element={<Pricing />} />
         <Route path='login' element={<Login />} />
         <Route path='app' element={<AppLayout />}>
-          <Route index element={<p>List of Cities index</p>} />
-          <Route path='cities' element={<p>List of Cities</p>} />
+          <Route index element={<CityList />} />
+          <Route path='cities' element={<CityList />} />
           <Route path='countries' element={<p>COUNTRIES</p>} />
           <Route path='form' element={<p>FORM</p>} />
         </Route>

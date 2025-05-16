@@ -2,9 +2,23 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import styles from './Map.module.css';
 import { useState } from 'react';
+import { useCities } from '../contexts/CitiesContext';
+import L from 'leaflet';
+
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+// fix for missing icon
+let DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+});
+L.Marker.prototype.options.icon = DefaultIcon;
 
 const Map = () => {
   const navigate = useNavigate();
+  const { cities } = useCities();
+
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const [searchParams, setSearchParams] = useSearchParams();
   const lat = searchParams.get('lat');

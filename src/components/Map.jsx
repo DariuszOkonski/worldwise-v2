@@ -38,12 +38,7 @@ const Map = () => {
   }, [mapLat, mapLng]);
 
   return (
-    <div
-      className={styles.mapContainer}
-      // onClick={() => {
-      //   navigate('form');
-      // }}
-    >
+    <div className={styles.mapContainer}>
       <MapContainer
         center={mapPosition}
         zoom={6}

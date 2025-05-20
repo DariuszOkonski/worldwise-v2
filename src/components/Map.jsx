@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import L from 'leaflet';
+import { useEffect, useState } from 'react';
 import {
   MapContainer,
   Marker,
@@ -7,15 +9,14 @@ import {
   useMap,
   useMapEvents,
 } from 'react-leaflet';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import styles from './Map.module.css';
-import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCities } from '../contexts/CitiesContext';
-import L from 'leaflet';
+import styles from './Map.module.css';
 
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import { useGeolocation } from '../hooks/useGeolocation';
+import useUrlPosition from '../hooks/useUrlPosition';
 import Button from './Button';
 
 // FIX FOR MISSING POINTER ICONS
@@ -28,7 +29,6 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const Map = () => {
   const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const [searchParams] = useSearchParams();
 
   const {
     isLoading: isLoadingPosition,
@@ -36,8 +36,7 @@ const Map = () => {
     getPosition,
   } = useGeolocation();
 
-  const mapLat = searchParams.get('lat');
-  const mapLng = searchParams.get('lng');
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(() => {
     if (mapLat && mapLng) {

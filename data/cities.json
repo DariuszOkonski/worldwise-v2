@@ -59,6 +59,30 @@
         "lat": "52.214338608258224",
         "lng": "21.26953125"
       }
+    },
+    {
+      "id": "1d18",
+      "cityName": "Sever do Vouga",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2025-05-20T07:48:21.627Z",
+      "notes": "sss",
+      "position": {
+        "lat": "40.78054143186033",
+        "lng": "-8.349609375000002"
+      }
+    },
+    {
+      "id": "5cfe",
+      "cityName": "Carballedo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-05-20T07:50:35.428Z",
+      "notes": "hello",
+      "position": {
+        "lat": "42.50450285299051",
+        "lng": "-7.866210937500001"
+      }
     }
   ]
 }

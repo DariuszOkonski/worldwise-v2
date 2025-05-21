@@ -35,54 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
-    },
-    {
-      "id": "4d5e",
-      "cityName": "Montreuil",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2025-05-20T07:42:53.368Z",
-      "notes": "test",
-      "position": {
-        "lat": "48.864714761802794",
-        "lng": "2.4609375000000004"
-      }
-    },
-    {
-      "id": "e942",
-      "cityName": "Wiazowna",
-      "country": "Poland",
-      "emoji": "🇵🇱",
-      "date": "2025-05-20T07:45:38.244Z",
-      "notes": "wwa",
-      "position": {
-        "lat": "52.214338608258224",
-        "lng": "21.26953125"
-      }
-    },
-    {
-      "id": "1d18",
-      "cityName": "Sever do Vouga",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2025-05-20T07:48:21.627Z",
-      "notes": "sss",
-      "position": {
-        "lat": "40.78054143186033",
-        "lng": "-8.349609375000002"
-      }
-    },
-    {
-      "id": "5cfe",
-      "cityName": "Carballedo",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-05-20T07:50:35.428Z",
-      "notes": "hello",
-      "position": {
-        "lat": "42.50450285299051",
-        "lng": "-7.866210937500001"
-      }
     }
   ]
 }
